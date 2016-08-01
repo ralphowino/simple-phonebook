@@ -12,9 +12,14 @@
 */
 
 Route::get('/', function () {
+    if(Auth::check())
+    {
+        return redirect('/contacts');
+    }
     return view('welcome');
 });
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::resource('contacts', 'ContactsController');
