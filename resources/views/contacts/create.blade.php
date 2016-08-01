@@ -4,8 +4,8 @@
     <div class="container-fluid">
         <div class="panel-body">
             <form action="{{route('contacts.store')}}" method="POST" role="form">
+                <h2>Enter contact details</h2>
                 {{csrf_field()}}
-
                 <div class="form-group">
                     <label for="first_name">First Name</label>
                     <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First name"

@@ -8,6 +8,8 @@ class Contact extends Model
 {
     protected $fillable = ['first_name', 'last_name', 'email', 'user_id', 'phone', 'notes'];
 
+    protected $perPage = 10;
+
 
     public function getNameAttribute($value)
     {

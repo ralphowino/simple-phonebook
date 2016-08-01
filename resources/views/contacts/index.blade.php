@@ -19,7 +19,7 @@
                     </p><!-- /input-group -->
                 </form>
                 <div class="list-group">
-                    @foreach($contacts as $contact)
+                    @forelse($contacts as $contact)
                         <a href="{{route('contacts.show',$contact->id)}}" class="list-group-item" style="padding: 0;">
                         <span class="row">
                             <span class="col-xs-3">
@@ -30,7 +30,11 @@
                             </span>
                         </span>
                         </a>
-                    @endforeach
+                        @empty
+                        <div class="alert alert-info">
+                            <p>No contacts added yet!</p>
+                        </div>
+                    @endforelse
                 </div>
                 <div>
                     <div class="pull-left" style="margin:24px 0;">

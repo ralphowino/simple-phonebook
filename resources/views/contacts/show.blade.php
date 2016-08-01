@@ -39,10 +39,10 @@
 
 
                 <p>
-                    <a href="{{route('contacts.edit',$contact->id)}}" class="btn btn-default" role="button">
+                    <a id="edit-contact" href="{{route('contacts.edit',$contact->id)}}" class="btn btn-default" role="button">
                         <i class="glyphicon glyphicon-pencil"></i>
                     </a>
-                    <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#deleteContact">
+                    <button id="delete-btn"  class="btn btn-danger" type="button" data-toggle="modal" data-target="#deleteContact">
                         <i class="glyphicon glyphicon-trash"></i>
                     </button>
                 </p>
